@@ -128,16 +128,15 @@
     ```sql
     SELECT name FROM world
     WHERE 
-    name LIKE '%a%' and length(name) - length(replace(name, 'a', '')) = 1 AND 
-    name LIKE '%e%' and length(name) - length(replace(name, 'e', '')) = 1 AND 
-    name LIKE '%i%' and length(name) - length(replace(name, 'i', '')) = 1 AND 
-    name LIKE '%o%' and length(name) - length(replace(name, 'o', '')) = 1 AND 
-    name LIKE '%u%' and length(name) - length(replace(name, 'u', '')) = 1
-    		AND 
+    name LIKE '%a%' AND length(name) - length(replace(name, 'a', '')) = 1 AND 
+    name LIKE '%e%' AND length(name) - length(replace(name, 'e', '')) = 1 AND 
+    name LIKE '%i%' AND length(name) - length(replace(name, 'i', '')) = 1 AND 
+    name LIKE '%o%' AND length(name) - length(replace(name, 'o', '')) = 1 AND 
+    name LIKE '%u%' AND length(name) - length(replace(name, 'u', '')) = 1 AND 
     name NOT LIKE '% %'
     
     ```
-
     
+
 
 ​	
