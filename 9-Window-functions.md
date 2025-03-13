@@ -93,11 +93,11 @@ All these results are recorded in a table **ge**
    SELECT party,COUNT(1) FROM (
      SELECT constituency,party FROM (
        SELECT constituency,
-       			 party, 
-       			 votes,
-       		   RANK() over (PARTITION BY constituency ORDER BY votes DESC) AS r
+              party, 
+              votes,
+              RANK() over (PARTITION BY constituency ORDER BY votes DESC) AS r
        FROM ge
-   	  WHERE constituency like 'S%' AND yr  = 2017
+       WHERE constituency like 'S%' AND yr  = 2017
        ORDER BY r , constituency
    ) AS x
      WHERE x.r=1) AS y
